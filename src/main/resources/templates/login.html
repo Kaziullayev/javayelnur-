@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+</head>
+<body>
+<h1>Login</h1>
+<form action="/login" method="post">
+    <!-- Поле для ввода ссылки на фото -->
+    <label for="photoPath">Photo URL:</label>
+    <input type="text" id="photoPath" name="photoPath" placeholder="Enter photo URL" required>
+
+    <!-- Кнопка для отправки данных -->
+    <button type="submit">Login</button>
+</form>
+
+<!-- Кнопка для перехода на страницу Register -->
+<button onclick="location.href='/register'">Register</button>
+
+<!-- Кнопка для перехода на страницу Main -->
+<button onclick="location.href='/main'">Main</button>
+</body>
+</html>
+

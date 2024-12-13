@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Main</title>
+</head>
+<body>
+<h1>All Users</h1>
+<ul>
+    <li th:each="user : ${users}">
+        <p th:text="${user.photoPath}"></p>
+        <img th:src="@{'/uploads/' + ${#strings.substring(user.photoPath, user.photoPath.lastIndexOf('/') + 1)}}" alt="User Photo" width="200">
+    </li>
+</ul>
+
+<!-- Кнопки для перехода -->
+<button onclick="location.href='/login'">Login</button>
+<button onclick="location.href='/register'">Register</button>
+</body>
+</html>
+
